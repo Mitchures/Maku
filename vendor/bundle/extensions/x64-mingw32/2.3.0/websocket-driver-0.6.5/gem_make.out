@@ -1,0 +1,16 @@
+current directory: C:/Users/mitchell.hollander/Documents/Software Development/my.code-projects/appleScraper/vendor/bundle/gems/websocket-driver-0.6.5/ext/websocket-driver
+C:/Ruby233-x64/bin/ruby.exe -r ./siteconf20180208-166724-vhx8vl.rb extconf.rb
+creating Makefile
+
+current directory: C:/Users/mitchell.hollander/Documents/Software Development/my.code-projects/appleScraper/vendor/bundle/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: C:/Users/mitchell.hollander/Documents/Software Development/my.code-projects/appleScraper/vendor/bundle/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR="
+generating websocket_mask-x64-mingw32.def
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: C:/Users/mitchell.hollander/Documents/Software Development/my.code-projects/appleScraper/vendor/bundle/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20180208-166724-yq3m8d

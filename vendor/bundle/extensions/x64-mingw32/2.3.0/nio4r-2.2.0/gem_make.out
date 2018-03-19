@@ -1,0 +1,14 @@
+current directory: C:/Users/mitchell.hollander/Documents/Software Development/my.code-projects/appleScraper/vendor/bundle/gems/nio4r-2.2.0/ext/nio4r
+C:/Ruby233-x64/bin/ruby.exe -r ./siteconf20180208-166724-gyvql2.rb extconf.rb
+
+current directory: C:/Users/mitchell.hollander/Documents/Software Development/my.code-projects/appleScraper/vendor/bundle/gems/nio4r-2.2.0/ext/nio4r
+make "DESTDIR=" clean
+make: *** No rule to make target `clean'.  Stop.
+
+current directory: C:/Users/mitchell.hollander/Documents/Software Development/my.code-projects/appleScraper/vendor/bundle/gems/nio4r-2.2.0/ext/nio4r
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+current directory: C:/Users/mitchell.hollander/Documents/Software Development/my.code-projects/appleScraper/vendor/bundle/gems/nio4r-2.2.0/ext/nio4r
+make "DESTDIR=" install
+make: Nothing to be done for `install'.
