@@ -1,16 +1,16 @@
-current directory: C:/Users/mitchell.hollander/Documents/Software Development/my.code-projects/appleScraper/vendor/bundle/gems/bindex-0.5.0/ext/bindex
-C:/Ruby233-x64/bin/ruby.exe -r ./siteconf20180208-166724-g2p4y2.rb extconf.rb
+current directory: C:/Users/mitchell.hollander/Documents/Software Development/my.code-projects/filmz/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+C:/Ruby233-x64/bin/ruby.exe -r ./siteconf20180319-183164-9guz61.rb extconf.rb
 creating Makefile
 
-current directory: C:/Users/mitchell.hollander/Documents/Software Development/my.code-projects/appleScraper/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+current directory: C:/Users/mitchell.hollander/Documents/Software Development/my.code-projects/filmz/vendor/bundle/gems/bindex-0.5.0/ext/bindex
 make "DESTDIR=" clean
 
-current directory: C:/Users/mitchell.hollander/Documents/Software Development/my.code-projects/appleScraper/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+current directory: C:/Users/mitchell.hollander/Documents/Software Development/my.code-projects/filmz/vendor/bundle/gems/bindex-0.5.0/ext/bindex
 make "DESTDIR="
 generating cruby-x64-mingw32.def
 compiling cruby.c
 linking shared-object bindex/cruby.so
 
-current directory: C:/Users/mitchell.hollander/Documents/Software Development/my.code-projects/appleScraper/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+current directory: C:/Users/mitchell.hollander/Documents/Software Development/my.code-projects/filmz/vendor/bundle/gems/bindex-0.5.0/ext/bindex
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 cruby.so ./.gem.20180208-166724-1mwa0jp/bindex
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20180319-183164-1secgvj/bindex
