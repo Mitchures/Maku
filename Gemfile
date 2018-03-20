@@ -39,6 +39,7 @@ gem 'jquery-rails'
 
 # Movie DB Ruby Wrapper
 gem 'themoviedb-api'
+# https://github.com/18Months/themoviedb-api
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
