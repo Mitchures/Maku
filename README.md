@@ -13,5 +13,6 @@ https://colorlib.com/demo?theme=philosophy
 https://colorlib.com/demo?theme=fancy
 https://colorlib.com/demo?theme=glint
 https://colorlib.com/demo?theme=boxus
+https://colorlib.com/demo?theme=dinomuz
 
 -->
