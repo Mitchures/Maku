@@ -41,6 +41,10 @@ gem 'jquery-rails'
 gem 'themoviedb-api'
 # https://github.com/18Months/themoviedb-api
 
+# Firebase
+gem 'firebase'
+# https://medium.com/@channaly/connect-to-firebase-realtime-database-from-rails-application-f42c81dbb532
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
