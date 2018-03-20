@@ -28,3 +28,4 @@
 
 # http://coffeescript.org/#top
 # https://css-tricks.com/jquery-coffeescript/
+# https://raw.githubusercontent.com/icebob/coffeescript_cheatsheet/master/coffeescript_cheatsheet.png
