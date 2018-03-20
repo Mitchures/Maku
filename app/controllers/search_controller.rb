@@ -1,6 +1,6 @@
 class SearchController < ApplicationController
   def search
-    @search = Tmdb::Search.movie(params[:search], page: 1, language: 'en')
+    @search = Tmdb::Search.movie(params[:search])
     render :json => @search
   end
 end
