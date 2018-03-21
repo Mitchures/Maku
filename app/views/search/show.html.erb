@@ -1,0 +1,21 @@
+<div class="search-results-container card-columns">
+  <% @search.each do |m| %>
+    <div class='card'>
+      <img class='card-img-top img-fluid' src='https://image.tmdb.org/t/p/w500/<%= m.backdrop_path %>' />
+      <div class='card-body'>
+        <h5 class='card-title'><%= m.title %></h5>
+        <h6 class="card-subtitle mb-2 text-muted"><%= m.release_date.slice(0..3) %></h6>
+        <p class="card-text">
+          <% m.genres.first(3).each do |g| %>
+            <span class="badge badge-light"><%= g %></span>
+          <% end %>
+        </p>
+        <p class="card-text"><small class="text-muted"><%= m.overview %></small></p>
+      </div>
+      <div class="card-actions">
+        <a class="btn btn-outline-primary" href="<%= url_for(:controller => 'movie_details', :action => 'show') %>?id=<%= m.id %>" data-toggle="tooltip" data-placement="bottom" title="View Film Details"><i class="material-icons">play_arrow</i></a>
+        <a class="btn btn-outline-primary" href="#" data-toggle="tooltip" data-placement="bottom" title="Add Film to Watchlist"><i class="material-icons">playlist_add</i></a>
+      </div>
+    </div>
+  <% end %>
+</div>

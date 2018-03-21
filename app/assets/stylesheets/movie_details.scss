@@ -7,7 +7,8 @@ body {
 .movie-jumbotron {
     background-color: #ffffff;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
     height: 500px;
     .btn-float {
       position: absolute;
