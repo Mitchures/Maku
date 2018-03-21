@@ -1,0 +1,28 @@
+// Place all the styles related to the MovieDetails controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background-color: #ffffff;
+}
+.movie-jumbotron {
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 500px;
+    .btn-float {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      background-color: #fff;
+    }
+}
+.jumbotron {
+  box-shadow: none !important;
+}
+.movie-title {
+  font-family: 'YTSans', serif;
+  font-variant-ligatures: none;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-left: 5px;
+}

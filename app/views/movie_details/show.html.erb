@@ -1,0 +1,15 @@
+<div class="jumbotron mb-5 px-lg-3 jumbotron-fluid movie-jumbotron" style="background-image: url(https://image.tmdb.org/t/p/original/<%= @film.backdrop_path %>);">
+  <a href="" class="btn btn-float"><i class="material-icons">keyboard_backspace</i></a>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <h1 class="movie-title"><%= @film.title %></h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm">
+      <p><%= @film.overview %></p>
+    </div>
+  </div>
+</div>

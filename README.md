@@ -16,3 +16,10 @@ https://colorlib.com/demo?theme=boxus
 https://colorlib.com/demo?theme=dinomuz
 
 -->
+
+<!--
+Tutorial on User Sign-Up and Login for Rails
+
+http://blog.nbostech.com/2015/08/loginregistration-social-signup-using-ruby-on-rails/
+
+ -->

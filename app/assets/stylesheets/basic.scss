@@ -1,16 +1,31 @@
+@import 'partials/fonts';
+// Global
+body {
+  background-color: #f4f4f4;
+}
 // Navigation
-.navbar-brand {
-  span {
-    margin-left: 5px;
+nav {
+  background-color: #fff;
+  box-shadow: 0px 4px 8px -3px rgba(17, 17, 17, .06);
+  .navbar-brand {
+    span {
+      font-family: 'YTSans', serif;
+      font-variant-ligatures: none;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-left: 5px;
+      font-size: 1.5rem;
+    }
   }
 }
 // Results container
 .search-results-container {
-  margin: 20px;
+  margin: 10px 20px 10px 20px;
 }
 
 // Cards
 .card-columns {
+  column-count: 2;
   @include media-breakpoint-only(lg) {
     column-count: 3;
   }
@@ -19,15 +34,32 @@
   }
   .card {
     overflow: hidden;
-    margin-top: 35px;
-    margin-bottom: 36px;
-    width: 90%;
-    border-radius: 5px;
-    -webkit-box-shadow: 10px 15px 50px -10px rgba(0, 0, 0, 0.1);
-    box-shadow: 10px 15px 50px -10px rgba(0, 0, 0, 0.1);
+    // margin-top: 35px;
+    margin-top: 10px;
+    // margin-bottom: 36px;
+    margin-bottom: 0px;
+    width: 100%;
+    // width: 90%;
+    border-radius: 0px;
+    // border-radius: 15px;
+    // -webkit-box-shadow: 10px 15px 50px -10px rgba(0, 0, 0, 0.1);
+    // box-shadow: 10px 15px 50px -10px rgba(0, 0, 0, 0.1);
+    box-shadow: none;
     .card-body {
       .card-title {
-        font-weight: 600;
+        font-family: 'YTSans', serif;
+        font-size: 34px;
+        font-variant-ligatures: none;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+        // white-space: nowrap;
+      }
+      .card-text {
+        small {
+          font-size: 85%;
+        }
       }
     }
   }
