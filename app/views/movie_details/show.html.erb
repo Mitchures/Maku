@@ -3,19 +3,19 @@
 </div>
 <div class="container">
   <div class="row">
-    <div class="col-sm">
+    <div class="col">
       <h1 class="movie-title"><%= @film.title %></h1>
     </div>
   </div>
   <div class="row">
-    <div class="col-sm">
+    <div class="col">
       <% @film.genres.each do |g| %>
         <span class="badge badge-light mb-2"><%= g.name %></span>
       <% end %>
     </div>
   </div>
   <div class="row">
-    <div class="col-sm">
+    <div class="col">
       <p><%= @film.overview %></p>
     </div>
   </div>
