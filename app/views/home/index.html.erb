@@ -13,7 +13,8 @@
         <p class="card-text"><small class="text-muted"><%= m.overview %></small></p>
       </div>
       <div class="card-actions">
-        <a class="btn btn-outline-primary" href="<%= url_for(:controller => 'movie_details', :action => 'show') %>?id=<%= m.id %>" data-toggle="tooltip" data-placement="bottom" title="View Film Details"><i class="material-icons">play_arrow</i></a>
+        <a class="btn btn-outline-primary" href="<%= url_for(:controller => 'movie_details', :action => 'show') %>?id=<%= m.id %>" data-toggle="tooltip" data-placement="bottom" title="View Film Details"><i class="material-icons">theaters</i></a>
+        <a class="btn btn-outline-primary" href="#" data-toggle="tooltip" data-placement="bottom" title="View Trailer"><i class="material-icons">play_arrow</i></a>
         <a class="btn btn-outline-primary" href="#" data-toggle="tooltip" data-placement="bottom" title="Add Film to Watchlist"><i class="material-icons">playlist_add</i></a>
       </div>
     </div>

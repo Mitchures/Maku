@@ -11,9 +11,9 @@ body {
     background-position: 50% 50%;
     height: 500px;
     .btn-float {
-      position: absolute;
-      top: 30px;
-      left: 30px;
+      position: fixed;
+      top: 18px;
+      left: 18px;
       background-color: #fff;
     }
 }

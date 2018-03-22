@@ -9,6 +9,13 @@
   </div>
   <div class="row">
     <div class="col-sm">
+      <% @film.genres.each do |g| %>
+        <span class="badge badge-light mb-2"><%= g.name %></span>
+      <% end %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm">
       <p><%= @film.overview %></p>
     </div>
   </div>
