@@ -20,12 +20,15 @@ nav {
 }
 // Results container
 .search-results-container {
-  margin: 10px 20px 10px 20px;
+  margin: 2px 10px 10px 10px;
 }
 
 // Cards
 .card-columns {
   column-count: 1;
+  @include media-breakpoint-only(md) {
+    column-count: 2;
+  }
   @include media-breakpoint-only(lg) {
     column-count: 3;
   }
