@@ -11,6 +11,7 @@
           <% end %>
         </p>
         <p class="card-text"><small class="text-muted"><%= m.overview %></small></p>
+        <pre><%= m.video_data %></pre>
       </div>
       <div class="card-actions">
         <a class="btn btn-outline-primary view-details-btn" href="<%= url_for(:controller => 'movie_details', :action => 'show') %>?id=<%= m.id %>" title="View Film Details"><i class="material-icons">theaters</i></a>

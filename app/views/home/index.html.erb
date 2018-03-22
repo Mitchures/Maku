@@ -14,7 +14,7 @@
       </div>
       <div class="card-actions">
         <a class="btn btn-outline-primary view-details-btn" href="<%= url_for(:controller => 'movie_details', :action => 'show') %>?id=<%= m.id %>" title="View Film Details"><i class="material-icons">theaters</i></a>
-        <a class="btn btn-outline-primary" href="#" title="View Trailer"><i class="material-icons">play_arrow</i></a>
+        <a class="btn btn-outline-primary" href="<%= m.trailer_urls[0] %>" title="View Trailer"><i class="material-icons">play_arrow</i></a>
         <a class="btn btn-outline-primary" href="#" title="Add Film to Watchlist"><i class="material-icons">playlist_add</i></a>
       </div>
     </div>
