@@ -14,6 +14,7 @@
 //= require popper
 //= require bootstrap
 //= require material
+//= require aos
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
