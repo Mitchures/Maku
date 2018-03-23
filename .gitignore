@@ -18,6 +18,7 @@
 /node_modules
 /yarn-error.log
 
+# comment out Gemfile and Package json when deploying to heroku
 Gemfile.lock
 package-lock.json
 .byebug_history
