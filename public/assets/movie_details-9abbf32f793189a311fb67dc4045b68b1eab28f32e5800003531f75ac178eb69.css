@@ -1,0 +1,35 @@
+/* line 4, /Users/Mitchell/Documents/code/my-code.projects/Maku/app/assets/stylesheets/movie_details.scss */
+body {
+  background-color: #ffffff;
+}
+
+/* line 7, /Users/Mitchell/Documents/code/my-code.projects/Maku/app/assets/stylesheets/movie_details.scss */
+.movie-jumbotron {
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 500px;
+}
+/* line 13, /Users/Mitchell/Documents/code/my-code.projects/Maku/app/assets/stylesheets/movie_details.scss */
+.movie-jumbotron .btn-float {
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  background-color: #fff;
+}
+
+/* line 20, /Users/Mitchell/Documents/code/my-code.projects/Maku/app/assets/stylesheets/movie_details.scss */
+.jumbotron {
+  box-shadow: none !important;
+}
+
+/* line 23, /Users/Mitchell/Documents/code/my-code.projects/Maku/app/assets/stylesheets/movie_details.scss */
+.movie-title {
+  font-family: 'YTSans', serif;
+  -webkit-font-variant-ligatures: none;
+          font-variant-ligatures: none;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-left: 5px;
+}
