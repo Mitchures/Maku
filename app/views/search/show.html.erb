@@ -5,17 +5,17 @@
       <div class='card-body'>
         <h5 class='card-title'><%= m.title %></h5>
         <h6 class="card-subtitle mb-2 text-muted"><%= m.release_date.slice(0..3) %></h6>
-        <p class="card-text">
+        <!-- <p class="card-text">
           <% m.genres.first(3).each do |g| %>
             <span class="badge badge-light"><%= g %></span>
           <% end %>
-        </p>
+        </p> -->
         <p class="card-text"><small class="text-muted"><%= m.overview %></small></p>
       </div>
       <div class="card-actions">
         <a class="btn btn-outline-primary view-details-btn" href="<%= url_for(:controller => 'movie_details', :action => 'show') %>?id=<%= m.id %>" title="View Film Details"><i class="material-icons">theaters</i></a>
-        <a class="btn btn-outline-primary" href="<%= m.trailer_urls[0] %>" title="View Trailer"><i class="material-icons">play_arrow</i></a>
-        <a class="btn btn-outline-primary" href="#" title="Add Film to Watchlist"><i class="material-icons">playlist_add</i></a>
+        <a class="btn btn-outline-primary" href="#" title="Add Film to Favorites"><i class="material-icons">add</i></a>
+        <a class="btn btn-outline-primary" href="#" title="Like Film"><i class="material-icons">favorite_border</i></a>
       </div>
     </div>
   <% end %>

@@ -8,11 +8,6 @@ class SearchController < ApplicationController
     results = query.results
     results.each do |i|
       i.genres = []
-      i.trailer_urls = []
-      unless i.video
-        i.video_data = Tmdb::Movie.videos(i.id)
-        i.video_data.find { |v| i.trailer_urls.push(ytv_url + v.key) unless v.type != "Trailer"}
-      end
       i.genre_ids.each { |gid| genre_list.each { |gli| i.genres.push(gli.name) unless gid != gli.id } }
       unless i.backdrop_path.nil?
         i.backdrop_path = img_url_path + i.backdrop_path
