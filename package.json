@@ -2,7 +2,8 @@
   "name": "maku",
   "private": true,
   "dependencies": {
-    "aos": "^2.2.0"
+    "aos": "^2.2.0",
+    "material-kit": "^2.0.2"
   },
   "description": "A simple movie search app that uses the Movie Database API.",
   "version": "1.0.0",
