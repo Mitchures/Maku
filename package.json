@@ -6,5 +6,6 @@
   "description": "A simple movie search app that uses the Movie Database API.",
   "version": "1.0.0",
   "repository": "git+https://github.com/MitchellSH/Maku.git",
-  "author": "Mitchell Hollander"
+  "author": "Mitchell Hollander",
+  "license": "MIT"
 }
