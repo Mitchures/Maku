@@ -30,6 +30,7 @@ nav {
       letter-spacing: -0.5px;
       margin-left: 5px;
       font-size: 1.5rem;
+      color: #3c4858;
     }
   }
 }
@@ -53,18 +54,18 @@ Cards
     column-count: 4;
   }
   .card {
-    overflow: hidden;
+    // overflow: hidden;
     // margin-top: 35px;
-    margin-top: 10px;
+    margin-top: 65px;
     // margin-bottom: 36px;
     margin-bottom: 0px;
-    width: 100%;
+    width: 95%;
     // width: 90%;
-    border-radius: 0px;
+    // border-radius: 0px;
     // border-radius: 15px;
     // -webkit-box-shadow: 10px 15px 50px -10px rgba(0, 0, 0, 0.1);
     // box-shadow: 10px 15px 50px -10px rgba(0, 0, 0, 0.1);
-    box-shadow: none;
+    // box-shadow: none;
     // @extend .transition;
     // &:hover {
     //   position: absolute;
@@ -87,6 +88,11 @@ Cards
         small {
           font-size: 85%;
         }
+      }
+    }
+    .card-footer {
+      .stats {
+        line-height: 26px !important;
       }
     }
     .card-actions {

@@ -7,6 +7,9 @@
     <%= csrf_meta_tags %>
     <%= favicon_link_tag asset_path('favicon.ico') %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag '//fonts.googleapis.com/icon?family=Material+Icons' %>
+    <%= stylesheet_link_tag '//fonts.googleapis.com/css?family=Roboto:300,400,500,700' %>
+    <%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -23,7 +26,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <form id="film-search" action="<%= url_for(:controller => 'search', :action => 'show') %>" class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" name="movie" type="search" placeholder="Search" aria-label="Search">
-          <button id="submit" class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+          <button id="submit" class="btn btn-danger btn-raised btn-fab btn-fab-mini btn-round" type="submit"><i class="material-icons">search</i></button>
         </form>
       </div>
     </nav>

@@ -1,21 +1,32 @@
 <div class="search-results-container card-columns">
   <% @popular.each do |m| %>
-    <div class='card' data-aos="fade-up">
-      <img class='card-img-top img-fluid' src='https://image.tmdb.org/t/p/w500/<%= m.backdrop_path %>' />
-      <div class='card-body'>
-        <h5 class='card-title'><%= m.title %></h5>
-        <h6 class="card-subtitle mb-2 text-muted"><%= m.release_date.slice(0..3) %></h6>
-        <!-- <p class="card-text">
-          <% m.genres.first(3).each do |g| %>
-            <span class="badge badge-light"><%= g %></span>
-          <% end %>
-        </p> -->
-        <p class="card-text"><small class="text-muted"><%= m.overview %></small></p>
+    <div class="card card-product" data-count="1" data-aos="fade-up">
+      <div class="card-header card-header-image" data-header-animation="false">
+        <a href="#">
+            <img class="img" src="https://image.tmdb.org/t/p/w500/<%= m.backdrop_path %>">
+        </a>
       </div>
-      <div class="card-actions">
-        <a class="btn btn-outline-primary view-details-btn" href="<%= url_for(:controller => 'movie_details', :action => 'show') %>?id=<%= m.id %>" title="View Film Details"><i class="material-icons">theaters</i></a>
-        <a class="btn btn-outline-primary" href="#" title="Add Film to Favorites"><i class="material-icons">add</i></a>
-        <a class="btn btn-outline-primary" href="#" title="Like Film"><i class="material-icons">favorite_border</i></a>
+      <div class="card-body">
+          <div class="card-action text-center">
+              <!-- <button type="button" class="btn btn-danger btn-link fix-broken-card">
+                  <i class="material-icons">build</i> Fix Header!
+              </button> -->
+              <a class="btn btn-default btn-link view-details-btn" href="<%= url_for(:controller => 'movie_details', :action => 'show') %>?id=<%= m.id %>" title="View Film Details" rel="tooltip" data-placement="bottom" data-original-title="View Film Details"><i class="material-icons">theaters</i></a>
+              <a class="btn btn-default btn-link" href="#" title="Add Film to Favorites" rel="tooltip" data-placement="bottom" data-original-title="Add Film to Favorites"><i class="material-icons">add</i></a>
+              <a class="btn btn-default btn-link" href="#" title="Like Film" rel="tooltip" data-placement="bottom" data-original-title="Like Film"><i class="material-icons">favorite_border</i></a>
+          </div>
+          <h5 class='card-title'><%= m.title %></h5>
+          <!-- <div class="card-description">
+            <p><small class="text-muted"><%= m.overview %></small></p>
+          </div> -->
+      </div>
+      <div class="card-footer">
+          <div class="stats text-muted">
+              <%= m.release_date.slice(0..3) %>
+          </div>
+          <div class="stats text-muted">
+              <i class="material-icons">star_border</i><%= m.vote_average %>
+          </div>
       </div>
     </div>
   <% end %>
