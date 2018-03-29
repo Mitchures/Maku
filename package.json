@@ -1,7 +1,8 @@
 {
   "name": "maku",
   "dependencies": {
-    "aos": "^2.2.0"
+    "aos": "^2.2.0",
+    "npm": "^5.8.0"
   },
   "description": "A simple movie search app that uses the Movie Database API.",
   "version": "1.0.0",

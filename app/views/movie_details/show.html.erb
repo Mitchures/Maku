@@ -1,22 +1,22 @@
-<div class="jumbotron mb-5 px-lg-3 jumbotron-fluid movie-jumbotron" style="background-image: url(https://image.tmdb.org/t/p/original/<%= @film.backdrop_path %>);">
-  <a href="javascript:history.back()" class="btn btn-float"><i class="material-icons">keyboard_backspace</i></a>
-</div>
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <h1 class="movie-title"><%= @film.title %></h1>
+<div class="page-header header-filter clear-filter" data-parallax="true" style="background-image: url(https://image.tmdb.org/t/p/original/<%= @film.backdrop_path %>); transform: translate3d(0px, 0px, 0px);"></div>
+<div class="main main-raised">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1 class="movie-title"><%= @film.title %></h1>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <% @film.genres.each do |g| %>
-        <span class="badge badge-light mb-2"><%= g.name %></span>
-      <% end %>
+    <div class="row">
+      <div class="col">
+        <% @film.genres.each do |g| %>
+          <span class="badge badge-light mb-2"><%= g.name %></span>
+        <% end %>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <p><%= @film.overview %></p>
+    <div class="row">
+      <div class="col">
+        <p><%= @film.overview %></p>
+      </div>
     </div>
   </div>
 </div>

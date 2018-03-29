@@ -58,8 +58,8 @@ Cards
     // margin-top: 35px;
     margin-top: 65px;
     // margin-bottom: 36px;
-    margin-bottom: 0px;
-    width: 95%;
+    margin-bottom: 15px;
+    width: 100%;
     // width: 90%;
     // border-radius: 0px;
     // border-radius: 15px;
@@ -73,10 +73,20 @@ Cards
     //   transform: translateY(-5px);
     //   box-shadow: 0 10px 18px 0 rgba(0,0,0, .075)
     // }
+    .card-header {
+      a {
+        display: block;
+      }
+    }
     .card-body {
       .card-title {
+        margin-top: .625rem;
+        // font-size: 1.125rem;
+        // line-height: 1.5em;
+        // font-family: "Roboto Slab","Times New Roman",serif;
         font-family: 'YTSans', serif;
-        font-size: 34px;
+        // font-size: 34px;
+        font-size: 24px;
         font-variant-ligatures: none;
         font-weight: 700;
         letter-spacing: -0.5px;
@@ -92,7 +102,7 @@ Cards
     }
     .card-footer {
       .stats {
-        line-height: 26px !important;
+        line-height: 25px !important;
       }
     }
     .card-actions {

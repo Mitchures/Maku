@@ -27,3 +27,12 @@ body {
   letter-spacing: -0.5px;
   margin-left: 5px;
 }
+$primary: (
+  color: #f44336,
+  dark:  darken(#f44336, 10%),
+  light: lighten(#f44336, 10%)
+);
+@import "material";
+@import 'css/mkp.min';
+@import "npms";
+@import "basic";
