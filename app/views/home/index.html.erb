@@ -1,35 +1,27 @@
-<div class="search-results-container card-columns">
-  <% @popular.each do |m| %>
-    <div class="card card-product" data-count="1" data-aos="fade-up">
-      <div class="card-header card-header-image" data-header-animation="false">
-        <a href="<%= url_for(:controller => 'movie_details', :action => 'show') %>?id=<%= m.id %>">
-            <img class="img" src="https://image.tmdb.org/t/p/w500/<%= m.backdrop_path %>">
-        </a>
-        <div class="colored-shadow" style="background-image: url('https://image.tmdb.org/t/p/w500/<%= m.backdrop_path %>'); opacity: 1;"></div>
-      </div>
-      <div class="card-body">
-          <!-- <div class="card-action text-center">
-              <button type="button" class="btn btn-danger btn-link fix-broken-card">
-                  <i class="material-icons">build</i> Fix Header!
-              </button>
-              <a class="btn btn-default btn-link view-details-btn" href="<%= url_for(:controller => 'movie_details', :action => 'show') %>?id=<%= m.id %>" title="View Film Details" rel="tooltip" data-placement="bottom" data-original-title="View Film Details"><i class="material-icons">theaters</i></a>
-              <a class="btn btn-default btn-link" href="#" title="Add Film to Favorites" rel="tooltip" data-placement="bottom" data-original-title="Add Film to Favorites"><i class="material-icons">add</i></a>
-              <a class="btn btn-default btn-link" href="#" title="Like Film" rel="tooltip" data-placement="bottom" data-original-title="Like Film"><i class="material-icons">favorite_border</i></a>
-          </div> -->
-          <h5 class='card-title'><%= m.title %></h5>
-          <!-- <h6 class="card-category text-info"></h6> -->
-          <!-- <div class="card-description">
-            <p><small class="text-muted"><%= m.overview %></small></p>
-          </div> -->
-      </div>
-      <div class="card-footer">
-          <div class="stats text-muted">
-              <i class="material-icons">date_range</i><%= m.release_date.slice(0..3) %>
-          </div>
-          <div class="stats text-muted">
-              <i class="material-icons">star_border</i><%= m.vote_average %>
-          </div>
+<div class="page-header header-filter" data-parallax="true" style="background-image: url(<%= asset_path 'neo.jpg' %>); transform: translate3d(0px, 0px, 0px); min-height: 60vh;"></div>
+<div class="section" style="margin: -40vh 0 0;">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h2 class="text-white">Now Playing</h2>
+        <div class="home-page-card-columns card-columns">
+          <% @results.each do |m| %>
+          <a href="<%= url_for(:controller => 'movie_details', :action => 'show') %>?id=<%= m.id %>">
+            <div class="card" data-count="1" data-aos="fade-up">
+              <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/<%= m.backdrop_path %>">
+              <div class="card-body">
+                <h5 class='card-title'><%= m.title %></h5>
+              </div>
+              <div class="card-footer">
+                <div class="stats" style="color: #ffd54f;">
+                  <i class="material-icons">star</i><%= m.vote_average %>
+                </div>
+              </div>
+            </div>
+          </a>
+          <% end %>
+        </div>
       </div>
     </div>
-  <% end %>
+  </div>
 </div>

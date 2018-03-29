@@ -27,12 +27,13 @@ body {
   letter-spacing: -0.5px;
   margin-left: 5px;
 }
-$primary: (
-  color: #f44336,
-  dark:  darken(#f44336, 10%),
-  light: lighten(#f44336, 10%)
-);
-@import "material";
-@import 'css/mkp.min';
-@import "npms";
-@import "basic";
+
+.nav-pills {
+  .nav-item {
+    .nav-link.active {
+        color: #fff;
+        background-color: #f44336;
+        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(156, 39, 176, 0.4);
+    }
+  }
+}

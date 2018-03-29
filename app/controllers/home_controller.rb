@@ -1,14 +1,12 @@
 class HomeController < ApplicationController
 
   def index
-    popular = Tmdb::Movie.popular
-    genre_list = Tmdb::Genre.movie_list
-    pop_results = popular.results
-    pop_results.each do |i|
-      i.genres = []
-      i.genre_ids.each { |gid| genre_list.each { |gli| i.genres.push(gli.name) unless gid != gli.id } }
-    end
-    @popular = pop_results
+    movies = Tmdb::Movie.now_playing
+    results = movies.results
+    # results.each do |m|
+    #   m.cast = Tmdb::Movie.cast(m.id, limit: 10)
+    # end
+    @results = results
   end
 
 end

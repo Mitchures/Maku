@@ -1,10 +1,9 @@
-@import "https://fonts.googleapis.com/icon?family=Material+Icons";
-$primary: (
-  color: #f44336,
-  dark:  darken(#f44336, 10%),
-  light: lighten(#f44336, 10%)
-);
-@import "material";
+// $primary: (
+//   color: #f44336,
+//   dark:  darken(#f44336, 10%),
+//   light: lighten(#f44336, 10%)
+// );
+@import "bootstrap";
 @import 'css/mdp.min';
 // @import 'css/mkp.min';
 @import "npms";

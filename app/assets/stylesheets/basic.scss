@@ -15,6 +15,20 @@
 ===============================================================*/
 body {
   background-color: #f4f4f4;
+  // display: none;
+}
+h1, h2, h3, h4, h5 {
+  font-family: 'YTSans', serif;
+  font-variant-ligatures: none;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+h1.title {
+  font-family: 'YTSans', serif;
+  font-variant-ligatures: none;
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
 /*==============================================================
   Navigation
@@ -23,6 +37,7 @@ nav {
   background-color: #fff;
   box-shadow: 0px 4px 8px -3px rgba(17, 17, 17, .06);
   .navbar-brand {
+    height: 56px !important;
     span {
       font-family: 'YTSans', serif;
       font-variant-ligatures: none;
@@ -42,6 +57,22 @@ nav {
 /*==============================================================
 Cards
 ===============================================================*/
+.home-page-card-columns {
+  @include media-breakpoint-only(md) {
+    column-count: 1 !important;
+  }
+  @include media-breakpoint-only(lg) {
+    column-count: 2 !important;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 3 !important;
+  }
+}
+.card-background {
+  &:after {
+    background-color: rgba(0, 0, 0, 0.28);
+  }
+}
 .card-columns {
   column-count: 1;
   @include media-breakpoint-only(md) {
@@ -102,7 +133,13 @@ Cards
     }
     .card-footer {
       .stats {
-        line-height: 25px !important;
+        line-height: 26px !important;
+        z-index: 2;
+      }
+      .actors {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
     }
     .card-actions {

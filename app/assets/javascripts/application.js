@@ -13,7 +13,6 @@
 //= require jquery3
 //= require popper
 //= require bootstrap
-//= require material
 //= require vendor/mkp.min
 //= require aos
 //= require rails-ujs

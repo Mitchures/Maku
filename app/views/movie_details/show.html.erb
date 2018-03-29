@@ -1,21 +1,61 @@
-<div class="page-header header-filter clear-filter" data-parallax="true" style="background-image: url(https://image.tmdb.org/t/p/original/<%= @film.backdrop_path %>); transform: translate3d(0px, 0px, 0px);"></div>
-<div class="main main-raised">
+<div class="page-header header-filter clear-filter" data-parallax="true" style="background-image: url(https://image.tmdb.org/t/p/original/<%= @film.backdrop_path %>); transform: translate3d(0px, 0px, 0px);">
   <div class="container">
     <div class="row">
-      <div class="col">
-        <h1 class="movie-title"><%= @film.title %></h1>
+      <div class="col ml-auto mr-auto text-center">
+        <h1 class="title"><%= @film.title %></h1>
       </div>
     </div>
-    <div class="row">
-      <div class="col">
-        <% @film.genres.each do |g| %>
-          <span class="badge badge-info mb-3"><%= g.name %></span>
+  </div>
+</div>
+<div class="section" style="margin: -14vh 0 0;">
+  <div class="container">
+    <div class="main main-raised" style="padding: 40px;">
+      <div class="row">
+        <div class="col text-center">
+          <h2>Details</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h3>Release Date</h3>
+          <p><%= @film.release_date %></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h3>Genres</h3>
+          <% @film.genres.each do |g| %>
+            <span class="badge badge-danger mb-3"><%= g.name %></span>
+          <% end %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h3>Overview</h3>
+          <p><%= @film.overview %></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h3>Top Billed Cast</h3>
+        </div>
+      </div>
+      <div class="row">
+        <% @film.cast.first(5).each do |p, i| %>
+        <div class="col-sm">
+          <div class="card card-profile">
+            <% if p.profile_path != nil %>
+              <div class="card-header card-header-image">
+                <img src="https://image.tmdb.org/t/p/w500/<%= p.profile_path %>">
+              </div>
+            <% end %>
+            <div class="card-body">
+              <h5 class='card-title'><%= p.name %></h5>
+              <h6 class='card-subtitle'><%= p.character %></h6>
+            </div>
+          </div>
+        </div>
         <% end %>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <p><%= @film.overview %></p>
       </div>
     </div>
   </div>
