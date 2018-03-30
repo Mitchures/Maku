@@ -1,6 +1,6 @@
 <div class="page-header header-filter" data-parallax="true" style="background-image: url(<%= asset_path 'neo-2.jpg' %>); transform: translate3d(0px, 0px, 0px); min-height: 60vh;"></div>
 <div class="section" style="margin: -40vh 0 0;">
-  <!-- <div class="container"> -->
+  <div class="container">
     <div class="row">
       <div class="col">
         <div class="container">
@@ -16,14 +16,6 @@
                 <div class="colored-shadow" style="background-image: url('https://image.tmdb.org/t/p/w500/<%= m.backdrop_path %>'); opacity: 1;"></div>
               </div>
               <div class="card-body">
-                  <!-- <div class="card-action text-center">
-                      <button type="button" class="btn btn-danger btn-link fix-broken-card">
-                          <i class="material-icons">build</i> Fix Header!
-                      </button>
-                      <a class="btn btn-default btn-link view-details-btn" href="<%= url_for(:controller => 'movie_details', :action => 'show') %>?id=<%= m.id %>" title="View Film Details" rel="tooltip" data-placement="bottom" data-original-title="View Film Details"><i class="material-icons">theaters</i></a>
-                      <a class="btn btn-default btn-link" href="#" title="Add Film to Favorites" rel="tooltip" data-placement="bottom" data-original-title="Add Film to Favorites"><i class="material-icons">add</i></a>
-                      <a class="btn btn-default btn-link" href="#" title="Like Film" rel="tooltip" data-placement="bottom" data-original-title="Like Film"><i class="material-icons">favorite_border</i></a>
-                  </div> -->
                   <h5 class='card-title'><%= m.title %></h5>
                   <!-- <div class="card-description">
                     <p><small class="text-muted"><%= m.overview %></small></p>
@@ -48,12 +40,12 @@
               <% else %>
                 <li class="page-item">
               <% end %>
-                <a class="page-link" href="<%= url_for(:controller => 'search', :action => 'show') %>?movie=<%= @search.user_input %>&page=<%= i %>"><%= i %></a>
+                <%= link_to i, search_show_path(:movie => @search.user_input, :page => i), class: "page-link" %>
               </li>
             <% end %>
           </ul>
         </nav>
       </div>
     </div>
-  <!-- </div> -->
+  </div>
 </div>
