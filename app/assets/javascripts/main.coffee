@@ -7,7 +7,9 @@ ready = ->
   return
 
 $(document).ready ready
-$(document).on 'turbolinks:load', ready
+$(document).on 'turbolinks:load', ->
+  ready
+  # window.scrollTo 0, 0
 
 
 
