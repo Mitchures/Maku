@@ -13,8 +13,8 @@
 //= require jquery3
 //= require popper
 //= require bootstrap
-//= require vendor/mkp.min
 //= require aos
+//= require vendor/mkp.min
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
