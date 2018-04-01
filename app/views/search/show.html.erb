@@ -8,7 +8,7 @@
         </div>
         <div class="search-results-container card-columns">
           <% @search.results.each do |m| %>
-            <div class="card card-product" data-count="1" data-aos="fade-up">
+            <div id="uid_<%= m.id %>" class="card card-product" data-count="1" data-aos="fade-up">
               <div class="card-header card-header-image" data-header-animation="false">
                 <a data-turbolinks="false" href="<%= url_for(:controller => 'movie_details', :action => 'show') %>?id=<%= m.id %>">
                     <img class="img" src="<%= m.backdrop_path %>">

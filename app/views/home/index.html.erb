@@ -7,7 +7,7 @@
         <div class="home-page-card-columns card-columns">
           <% @results.each do |m| %>
             <%= link_to movie_details_show_path(:id => m.id), 'data-turbolinks' => false do %>
-              <div class="card" data-count="1" data-aos="fade-up">
+              <div id="uid_<%= m.id %>" class="card" data-count="1" data-aos="fade-up">
                 <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/<%= m.backdrop_path %>">
                 <div class="card-body">
                   <h5 class='card-title'><%= m.title %></h5>
