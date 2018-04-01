@@ -10,7 +10,7 @@
           <% @search.results.each do |m| %>
             <div class="card card-product" data-count="1" data-aos="fade-up">
               <div class="card-header card-header-image" data-header-animation="false">
-                <a href="<%= url_for(:controller => 'movie_details', :action => 'show') %>?id=<%= m.id %>">
+                <a data-turbolinks="false" href="<%= url_for(:controller => 'movie_details', :action => 'show') %>?id=<%= m.id %>">
                     <img class="img" src="<%= m.backdrop_path %>">
                 </a>
                 <div class="colored-shadow" style="background-image: url('https://image.tmdb.org/t/p/w500/<%= m.backdrop_path %>'); opacity: 1;"></div>
@@ -21,14 +21,14 @@
                     <p><small class="text-muted"><%= m.overview %></small></p>
                   </div> -->
               </div>
-              <div class="card-footer">
+              <!-- <div class="card-footer">
                   <div class="stats text-muted">
                       <i class="material-icons">date_range</i><%= m.release_date.slice(0..3) %>
                   </div>
                   <div class="stats text-muted">
                       <i class="material-icons">star_border</i><%= m.vote_average %>
                   </div>
-              </div>
+              </div> -->
             </div>
           <% end %>
         </div>
@@ -40,7 +40,7 @@
               <% else %>
                 <li class="page-item">
               <% end %>
-                <%= link_to i, search_show_path(:movie => @search.user_input, :page => i), class: "page-link" %>
+                <%= link_to i, search_show_path(:movie => @search.user_input, :page => i), class: "page-link", 'data-turbolinks' => false %>
               </li>
             <% end %>
           </ul>

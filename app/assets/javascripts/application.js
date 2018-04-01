@@ -16,5 +16,7 @@
 //= require aos
 //= require vendor/mkp.min
 //= require rails-ujs
+//= require jquery.turbolinks 
 //= require turbolinks
+//= require turbolinks-compatibility
 //= require_tree .

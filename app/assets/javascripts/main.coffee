@@ -4,12 +4,10 @@ ready = ->
     duration: 600
     easing: 'ease-in-sine'
     delay: 100
-  return
+  # window.scrollTo 0, 0
+
 
 $(document).ready ready
-$(document).on 'turbolinks:load', ->
-  ready
-  # window.scrollTo 0, 0
 
 
 
