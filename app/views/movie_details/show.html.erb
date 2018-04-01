@@ -1,4 +1,8 @@
-<div class="page-header header-filter clear-filter" data-parallax="true" style="background-image: url(https://image.tmdb.org/t/p/original/<%= @film.backdrop_path %>); transform: translate3d(0px, 0px, 0px);">
+<% if @film.backdrop_path != nil %>
+  <div class="page-header header-filter clear-filter" data-parallax="true" style="background-image: url(https://image.tmdb.org/t/p/original/<%= @film.backdrop_path %>); transform: translate3d(0px, 0px, 0px);">
+<% else %>
+  <div class="page-header header-filter clear-filter" data-parallax="true" style="background-image: url(https://image.tmdb.org/t/p/original/<%= @film.poster_path %>); transform: translate3d(0px, 0px, 0px);">
+<% end %>
   <div class="container">
     <div class="row">
       <div class="col ml-auto mr-auto text-center">

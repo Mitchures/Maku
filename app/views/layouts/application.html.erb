@@ -14,12 +14,12 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-color-on-scroll bg-dark fixed-top navbar-expand-lg navbar-transparent" color-on-scroll="100">
+    <nav class="navbar navbar-color-on-scroll bg-light fixed-top navbar-expand-lg navbar-transparent" color-on-scroll="100">
       <div class="container">
         <div class="navbar-translate">
           <div class="navbar-brand">
             <img src="<%= asset_path 'maku.svg' %>" width="32" height="32" class="d-inline-block align-top" alt="">
-            <span class="text-white">Maku</span>
+            <span>Maku</span>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse">
             <span class="navbar-toggler-icon"></span>
@@ -36,7 +36,7 @@
           </ul>
         </div>
         <form id="film-search" action="<%= url_for(:controller => 'search', :action => 'show') %>" class="form-inline ml-auto">
-          <div class="form-group has-white">
+          <div class="form-group">
             <input class="form-control mr-sm-2" type="search" name="movie" type="text" placeholder="Search">
           </div>
           <input name="page" type="hidden" value="1">

@@ -1,10 +1,10 @@
 ready = ->
+  # $('body').fadeIn 1000
   AOS.init
     offset: 0
     duration: 600
     easing: 'ease-in-sine'
     delay: 100
-  # window.scrollTo 0, 0
 
 
 $(document).ready ready

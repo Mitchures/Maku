@@ -8,15 +8,17 @@
           <% @results.each do |m| %>
             <%= link_to movie_details_show_path(:id => m.id), 'data-turbolinks' => false do %>
               <div id="uid_<%= m.id %>" class="card" data-count="1" data-aos="fade-up">
-                <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/<%= m.backdrop_path %>">
-                <div class="card-body">
-                  <h5 class='card-title'><%= m.title %></h5>
+                <div class="card-header card-header-image">
+                  <img src="https://image.tmdb.org/t/p/w500/<%= m.backdrop_path %>">
                 </div>
-                <!-- <div class="card-footer">
-                  <div class="stats" style="color: #ffd54f;">
+                <div class="card-body">
+                  <h4 class='card-title'><%= m.title %></h4>
+                </div>
+                <div class="card-footer">
+                  <div class="stats text-muted">
                     <i class="material-icons">star</i><%= m.vote_average %>
                   </div>
-                </div> -->
+                </div>
               </div>
             <% end %>
           <% end %>

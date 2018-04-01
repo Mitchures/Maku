@@ -32,22 +32,52 @@ h1.title {
 }
 
 /*==============================================================
-  Forms & input boxes
+  Buttons
+===============================================================*/
+
+
+
+/*==============================================================
+  overrides
 ===============================================================*/
 .form-control {
   padding: 16px;
+  background-image: linear-gradient(to top, #fff 2px, rgba(255, 255, 255, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px) !important;
   &:focus {
     box-shadow: none !important;
   }
 }
+.page-link {
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+
+.pagination > .page-item.active > a {
+  background-color: #f2453d;
+  border-color: #f2453d;
+  box-shadow: 0 4px 5px 0 rgba(242,69,61, 0.14), 0 1px 10px 0 rgba(242,69,61, 0.12), 0 2px 4px -1px rgba(242,69,61, 0.2);
+}
 /*==============================================================
   Navigation
 ===============================================================*/
+.navbar-transparent {
+  color: #fff !important;
+  .navbar-brand {
+    span {
+      color: #fff;
+    }
+  }
+  .form-control {
+    color: #fff;
+  }
+}
 nav {
   background-color: #fff;
+  color: #000 !important;
   box-shadow: 0px 4px 8px -3px rgba(17, 17, 17, .06);
   .navbar-brand {
-    height: 56px !important;
+    height: 53px !important;
     span {
       font-family: 'YTSans', serif;
       font-variant-ligatures: none;
@@ -55,7 +85,7 @@ nav {
       letter-spacing: -0.5px;
       margin-left: 5px;
       font-size: 1.5rem;
-      color: #3c4858;
+      color: #000;
     }
   }
 }
@@ -67,6 +97,11 @@ nav {
 /*==============================================================
 Cards
 ===============================================================*/
+.card-title {
+  font-family: 'YTSans', serif;
+  font-variant-ligatures: none;
+  letter-spacing: -0.5px;
+}
 .home-page-card-columns {
   @include media-breakpoint-only(md) {
     column-count: 1 !important;
@@ -76,11 +111,6 @@ Cards
   }
   @include media-breakpoint-only(xl) {
     column-count: 3 !important;
-  }
-}
-.card-background {
-  &:after {
-    background-color: rgba(0, 0, 0, 0.28);
   }
 }
 .card-columns {
@@ -97,10 +127,10 @@ Cards
   .card {
     // overflow: hidden;
     // margin-top: 35px;
-    margin-top: 65px;
+    // margin-top: 65px;
     // margin-bottom: 36px;
-    margin-bottom: 15px;
-    width: 100%;
+    // margin-bottom: 15px;
+    // width: 100%;
     // width: 90%;
     // border-radius: 0px;
     // border-radius: 15px;
@@ -121,16 +151,12 @@ Cards
     }
     .card-body {
       .card-title {
-        margin-top: .625rem;
+        // margin-top: .625rem;
         // font-size: 1.125rem;
         // line-height: 1.5em;
         // font-family: "Roboto Slab","Times New Roman",serif;
-        font-family: 'YTSans', serif;
         // font-size: 34px;
-        font-size: 24px;
-        font-variant-ligatures: none;
-        font-weight: 700;
-        letter-spacing: -0.5px;
+        font-size: 20px;
         // overflow: hidden;
         // text-overflow: ellipsis;
         // white-space: nowrap;
@@ -143,7 +169,7 @@ Cards
     }
     .card-footer {
       .stats {
-        line-height: 26px !important;
+        line-height: 0px !important;
         z-index: 2;
       }
       .actors {

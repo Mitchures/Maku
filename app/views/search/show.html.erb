@@ -8,7 +8,7 @@
         </div>
         <div class="search-results-container card-columns">
           <% @search.results.each do |m| %>
-            <div id="uid_<%= m.id %>" class="card card-product" data-count="1" data-aos="fade-up">
+            <div id="uid_<%= m.id %>" class="card" data-count="1" data-aos="fade-up">
               <div class="card-header card-header-image" data-header-animation="false">
                 <a data-turbolinks="false" href="<%= url_for(:controller => 'movie_details', :action => 'show') %>?id=<%= m.id %>">
                     <img class="img" src="<%= m.backdrop_path %>">
@@ -16,19 +16,16 @@
                 <div class="colored-shadow" style="background-image: url('https://image.tmdb.org/t/p/w500/<%= m.backdrop_path %>'); opacity: 1;"></div>
               </div>
               <div class="card-body">
-                  <h5 class='card-title'><%= m.title %></h5>
+                  <h4 class='card-title'><%= m.title %></h4>
                   <!-- <div class="card-description">
                     <p><small class="text-muted"><%= m.overview %></small></p>
                   </div> -->
               </div>
-              <!-- <div class="card-footer">
-                  <div class="stats text-muted">
-                      <i class="material-icons">date_range</i><%= m.release_date.slice(0..3) %>
-                  </div>
-                  <div class="stats text-muted">
-                      <i class="material-icons">star_border</i><%= m.vote_average %>
-                  </div>
-              </div> -->
+              <div class="card-footer">
+                <div class="stats text-muted">
+                  <i class="material-icons">star</i><%= m.vote_average %>
+                </div>
+              </div>
             </div>
           <% end %>
         </div>
