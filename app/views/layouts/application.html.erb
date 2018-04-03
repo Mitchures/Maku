@@ -14,17 +14,16 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-color-on-scroll bg-light fixed-top navbar-expand-lg navbar-transparent" color-on-scroll="100">
+    <nav class="navbar navbar-color-on-scroll bg-light fixed-top navbar-expand-lg navbar-transparent" color-on-scroll="50">
       <div class="container">
         <div class="navbar-translate">
           <div class="navbar-brand">
-            <img src="<%= asset_path 'maku.svg' %>" width="32" height="32" class="d-inline-block align-top" alt="">
             <span>Maku</span>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse">
-            <span class="navbar-toggler-icon"></span>
-            <span class="navbar-toggler-icon"></span>
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon bg-dark"></span>
+            <span class="navbar-toggler-icon bg-dark"></span>
+            <span class="navbar-toggler-icon bg-dark"></span>
           </button>
         </div>
 
@@ -33,15 +32,11 @@
             <li class="nav-item">
               <%= link_to "Home", root_path, class: "nav-link", 'data-turbolinks' => false %>
             </li>
+            <li class="nav-item">
+              <%= link_to "Search", search_index_path, class: "nav-link", 'data-turbolinks' => false %>
+            </li>
           </ul>
         </div>
-        <form id="film-search" action="<%= url_for(:controller => 'search', :action => 'show') %>" class="form-inline ml-auto">
-          <div class="form-group">
-            <input class="form-control mr-sm-2" type="search" name="movie" type="text" placeholder="Search">
-          </div>
-          <input name="page" type="hidden" value="1">
-          <button id="submit" class="btn btn-danger btn-raised btn-fab btn-round" type="submit"><i class="material-icons">search</i></button>
-        </form>
       </div>
     </nav>
     <%= yield %>

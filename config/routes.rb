@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'movie_details/show'
 
+  get '/search/index'
   get '/search/show'
 
   root 'home#index'

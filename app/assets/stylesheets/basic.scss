@@ -14,21 +14,21 @@
   Globals
 ===============================================================*/
 body {
-  background-color: #f4f4f4;
-  // display: none;
+  background-color: #ffffff;
 }
 h1, h2, h3, h4, h5 {
-  font-family: 'YTSans', serif;
-  font-variant-ligatures: none;
-  font-weight: 700;
-  letter-spacing: -0.5px;
+  // font-family: 'YTSans', serif;
+  // font-variant-ligatures: none;
+  // font-weight: 700;
+  // letter-spacing: -0.5px;
+  color: #727272;
 }
 
 h1.title {
-  font-family: 'YTSans', serif;
-  font-variant-ligatures: none;
-  font-weight: 700;
-  letter-spacing: -0.5px;
+  // font-family: 'YTSans', serif;
+  // font-variant-ligatures: none;
+  // font-weight: 700;
+  // letter-spacing: -0.5px;
 }
 
 /*==============================================================
@@ -41,8 +41,7 @@ h1.title {
   overrides
 ===============================================================*/
 .form-control {
-  padding: 16px;
-  background-image: linear-gradient(to top, #fff 2px, rgba(255, 255, 255, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px) !important;
+  background-image: linear-gradient(to top, #f2453d 2px, rgba(255, 255, 255, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px) !important;
   &:focus {
     box-shadow: none !important;
   }
@@ -53,23 +52,26 @@ h1.title {
   }
 }
 
+.pagination {
+  margin-top: 70px;
+}
 .pagination > .page-item.active > a {
   background-color: #f2453d;
   border-color: #f2453d;
   box-shadow: 0 4px 5px 0 rgba(242,69,61, 0.14), 0 1px 10px 0 rgba(242,69,61, 0.12), 0 2px 4px -1px rgba(242,69,61, 0.2);
+  &:hover {
+    background-color: #f2453d !important;
+  }
 }
 /*==============================================================
   Navigation
 ===============================================================*/
 .navbar-transparent {
-  color: #fff !important;
+  color: #000 !important;
   .navbar-brand {
     span {
-      color: #fff;
+      color: #f44336;
     }
-  }
-  .form-control {
-    color: #fff;
   }
 }
 nav {
@@ -83,24 +85,46 @@ nav {
       font-variant-ligatures: none;
       font-weight: 700;
       letter-spacing: -0.5px;
-      margin-left: 5px;
-      font-size: 1.5rem;
-      color: #000;
+      font-size: 1.8rem;
+      color: #f44336;
     }
   }
 }
-// Results container
-.search-results-container {
-  margin: 2px 10px 10px 10px;
+
+/*==============================================================
+  Search
+===============================================================*/
+#film-search {
+  .form-group {
+    width: 100% !important;
+    margin-top: 0px;
+    padding-top: 0px;
+    .form-control {
+      width: 100% !important;
+      font-size: 35px;
+      height: 76px;
+      &::-webkit-input-placeholder {
+        font-size: 35px;
+        font-weight: 200;
+      }
+    }
+  }
+}
+
+/*==============================================================
+  Sections
+===============================================================*/
+.section {
+  margin-top: 25px;
 }
 
 /*==============================================================
 Cards
 ===============================================================*/
 .card-title {
-  font-family: 'YTSans', serif;
-  font-variant-ligatures: none;
-  letter-spacing: -0.5px;
+  // font-family: 'YTSans', serif;
+  // font-variant-ligatures: none;
+  // letter-spacing: -0.5px;
 }
 .home-page-card-columns {
   @include media-breakpoint-only(md) {
@@ -127,16 +151,17 @@ Cards
   .card {
     // overflow: hidden;
     // margin-top: 35px;
-    margin-top: 50px;
+    margin-top: 10px;
     // margin-bottom: 36px;
     // margin-bottom: 15px;
     // width: 100%;
     // width: 90%;
-    // border-radius: 0px;
+    border-radius: 0px !important;
     // border-radius: 15px;
     // -webkit-box-shadow: 10px 15px 50px -10px rgba(0, 0, 0, 0.1);
     // box-shadow: 10px 15px 50px -10px rgba(0, 0, 0, 0.1);
-    // box-shadow: none;
+    // box-shadow: none !important;
+    // -webkit-box-shadow: none !important;
     // @extend .transition;
     // &:hover {
     //   position: absolute;
@@ -145,43 +170,19 @@ Cards
     //   box-shadow: 0 10px 18px 0 rgba(0,0,0, .075)
     // }
     .card-header {
+      border-radius: 0px !important;
       a {
         display: block;
       }
     }
-    .card-body {
-      .card-title {
-        // margin-top: .625rem;
-        // font-size: 1.125rem;
-        // line-height: 1.5em;
-        // font-family: "Roboto Slab","Times New Roman",serif;
-        // font-size: 34px;
-        font-size: 20px;
-        // overflow: hidden;
-        // text-overflow: ellipsis;
-        // white-space: nowrap;
+    .card-header-image {
+      border-radius: 0px !important;
+      img {
+        border-radius: 0px !important;
+        box-shadow: none !important;
       }
-      .card-text {
-        small {
-          font-size: 85%;
-        }
-      }
-    }
-    .card-footer {
-      .stats {
-        line-height: 0px !important;
-        z-index: 2;
-      }
-      .actors {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-    }
-    .card-actions {
-      .btn {
-        overflow: inherit;
-        width: 100%;
+      .colored-shadow {
+        display: none;
       }
     }
   }

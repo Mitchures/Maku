@@ -1,23 +1,15 @@
-<div class="page-header header-filter" data-parallax="true" style="background-image: url(<%= asset_path 'neo.jpg' %>); transform: translate3d(0px, 0px, 0px); height: 80vh;"></div>
-<div class="section" style="margin: -60vh 0 0;">
+<div class="section">
   <div class="container">
     <div class="row">
       <div class="col">
-        <h2 class="text-white">Now Playing</h2>
+        <h2>Now Playing</h2>
         <div class="home-page-card-columns card-columns">
           <% @results.each do |m| %>
             <%= link_to movie_details_show_path(:id => m.id), 'data-turbolinks' => false do %>
-              <div id="uid_<%= m.id %>" class="card" data-count="1" data-aos="fade-up">
+              <div id="uid_<%= m.id %>" class="card card-blog card-plain" data-count="1" data-aos="fade-up">
                 <div class="card-header card-header-image">
                   <img src="https://image.tmdb.org/t/p/w500/<%= m.backdrop_path %>">
-                </div>
-                <div class="card-body">
-                  <h4 class='card-title'><%= m.title %></h4>
-                </div>
-                <div class="card-footer">
-                  <div class="stats text-muted">
-                    <i class="material-icons">star</i><%= m.vote_average %>
-                  </div>
+                  <div class='card-title'><%= m.title %></div>
                 </div>
               </div>
             <% end %>

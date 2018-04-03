@@ -17,6 +17,8 @@ https://colorlib.com/demo?theme=glint
 https://colorlib.com/demo?theme=boxus
 https://colorlib.com/demo?theme=dinomuz
 
+https://medium.muz.li/movie-cinema-ui-inspiration-9b76d4e6c05
+
 -->
 
 <!--

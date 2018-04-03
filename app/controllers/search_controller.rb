@@ -1,4 +1,9 @@
 class SearchController < ApplicationController
+
+  def index
+
+  end
+
   def show
     query = Tmdb::Search.movie(params[:movie], page: params[:page])
     query.user_input = params[:movie]
