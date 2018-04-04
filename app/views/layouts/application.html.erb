@@ -5,7 +5,7 @@
     <meta content="initial-scale=1, shrink-to-fit=no, width=device-width" name="viewport">
     <title>Maku</title>
     <%= csrf_meta_tags %>
-    <%= favicon_link_tag asset_path('favicon.ico') %>
+    <%= favicon_link_tag asset_path('favicon.png') %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag '//fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons' %>
     <%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css' %>
@@ -18,7 +18,9 @@
       <div class="container">
         <div class="navbar-translate">
           <div class="navbar-brand">
-            <span>Maku</span>
+            <%= link_to root_path, 'data-turbolinks' => false do %>
+              <span>Maku</span>
+            <% end %>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse">
             <span class="navbar-toggler-icon bg-dark"></span>
@@ -30,10 +32,10 @@
         <div class="collapse navbar-collapse">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <%= link_to "Home", root_path, class: "nav-link", 'data-turbolinks' => false %>
-            </li>
-            <li class="nav-item">
-              <%= link_to "Search", search_index_path, class: "nav-link", 'data-turbolinks' => false %>
+              <%= link_to search_index_path, class: "nav-link", 'data-turbolinks' => false do %>
+                <i class="material-icons">search</i>
+                Search
+              <% end %>
             </li>
           </ul>
         </div>

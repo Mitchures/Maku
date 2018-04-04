@@ -10,34 +10,42 @@
         </form>
       </div>
     </div>
-    <div class="row">
-      <div class="col">
-        <div class="search-results-container card-columns">
-          <% @search.results.each do |m| %>
-            <div id="uid_<%= m.id %>" class="card card-blog card-plain" data-count="1" data-aos="fade-up">
-              <div class="card-header card-header-image" data-header-animation="false">
-                <a data-turbolinks="false" href="<%= url_for(:controller => 'movie_details', :action => 'show') %>?id=<%= m.id %>">
-                    <img class="img" src="<%= m.backdrop_path %>">
-                    <div class='card-title'><%= m.title %></div>
-                </a>
+    <% if @search.total_results != 0 %>
+      <div class="row">
+        <div class="col">
+          <div class="search-results-container card-columns">
+            <% @search.results.each do |m| %>
+              <div id="uid_<%= m.id %>" class="card card-blog card-plain" data-count="1" data-aos="fade-up">
+                <div class="card-header card-header-image" data-header-animation="false">
+                  <a data-turbolinks="false" href="<%= url_for(:controller => 'movie_details', :action => 'show') %>?id=<%= m.id %>">
+                      <img class="img" src="<%= m.backdrop_path %>">
+                      <div class='card-title'><%= m.title %></div>
+                  </a>
+                </div>
               </div>
-            </div>
-          <% end %>
-        </div>
-        <nav style="background-color: transparent !important; box-shadow: none !important;">
-          <ul class="pagination justify-content-center">
-            <% for i in 1..@search.total_pages do %>
-              <% if @search.current_page == i %>
-                <li class="page-item active">
-              <% else %>
-                <li class="page-item">
-              <% end %>
-                <%= link_to i, search_show_path(:movie => @search.user_input, :page => i), class: "page-link", 'data-turbolinks' => false %>
-              </li>
             <% end %>
-          </ul>
-        </nav>
+          </div>
+          <nav style="background-color: transparent !important; box-shadow: none !important;">
+            <ul class="pagination justify-content-center">
+              <% for i in 1..@search.total_pages do %>
+                <% if @search.current_page == i %>
+                  <li class="page-item active">
+                <% else %>
+                  <li class="page-item">
+                <% end %>
+                  <%= link_to i, search_show_path(:movie => @search.user_input, :page => i), class: "page-link", 'data-turbolinks' => false %>
+                </li>
+              <% end %>
+            </ul>
+          </nav>
+        </div>
       </div>
-    </div>
+    <% else %>
+      <div class="row">
+        <div class="col">
+          <h1 style="color: #cccccc;">No Results</h1>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>

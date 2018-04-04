@@ -17,24 +17,12 @@ body {
   background-color: #ffffff;
 }
 h1, h2, h3, h4, h5 {
-  // font-family: 'YTSans', serif;
-  // font-variant-ligatures: none;
-  // font-weight: 700;
-  // letter-spacing: -0.5px;
-  color: #727272;
+  color: #000;
+  @extend .ytsans;
+  &.title {
+    @extend .ytsans;
+  }
 }
-
-h1.title {
-  // font-family: 'YTSans', serif;
-  // font-variant-ligatures: none;
-  // font-weight: 700;
-  // letter-spacing: -0.5px;
-}
-
-/*==============================================================
-  Buttons
-===============================================================*/
-
 
 
 /*==============================================================
@@ -81,12 +69,23 @@ nav {
   .navbar-brand {
     height: 53px !important;
     span {
-      font-family: 'YTSans', serif;
-      font-variant-ligatures: none;
-      font-weight: 700;
-      letter-spacing: -0.5px;
+      @extend .ytsans;
       font-size: 1.8rem;
       color: #f44336;
+    }
+  }
+  .navbar-collapse {
+    &:after {
+      background-color: #f44336;
+    }
+    @media (max-width: 991px) {
+      .navbar-nav {
+        .nav-item {
+          .nav-link {
+            color: #fff;
+          }
+        }
+      }
     }
   }
 }
@@ -101,11 +100,14 @@ nav {
     padding-top: 0px;
     .form-control {
       width: 100% !important;
-      font-size: 35px;
+      font-size: 34px;
       height: 76px;
+      color: #000;
+      @extend .ytsans;
       &::-webkit-input-placeholder {
-        font-size: 35px;
-        font-weight: 200;
+        font-size: 34px;
+        @extend .ytsans;
+        color: #e1e1e1;
       }
     }
   }
@@ -121,11 +123,6 @@ nav {
 /*==============================================================
 Cards
 ===============================================================*/
-.card-title {
-  // font-family: 'YTSans', serif;
-  // font-variant-ligatures: none;
-  // letter-spacing: -0.5px;
-}
 .home-page-card-columns {
   @include media-breakpoint-only(md) {
     column-count: 1 !important;
@@ -174,6 +171,10 @@ Cards
       a {
         display: block;
       }
+      .card-title {
+        @extend .ytsans;
+        font-size: 24px;
+      }
     }
     .card-header-image {
       border-radius: 0px !important;
@@ -183,6 +184,12 @@ Cards
       }
       .colored-shadow {
         display: none;
+      }
+    }
+    .card-body {
+      .card-title {
+        @extend .ytsans;
+        font-size: 24px;
       }
     }
   }
