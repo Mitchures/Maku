@@ -2,7 +2,7 @@
 
 A simple movie search app that uses the Movie Database API and Rails 5.
 
-https://maku.herokuapp.com/
+[Live Preview](https://maku.herokuapp.com/)
 
 ![alt text][logo]
 
